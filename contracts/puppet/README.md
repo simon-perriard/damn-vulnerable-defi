@@ -8,7 +8,7 @@ Starting with 25 ETH and 1000 DVTs in balance, you must steal all tokens from th
 
 ## Solution:
 
-Here the price in the lending pool relies on the state of the Uniswap pool, that can be manipulated. Uniswap V1 pools uses the Constant Product Market Maker ``E*T=K``, ``E`` is the ``ETH`` balance of the pool and ``T`` is the ERC20 token in the pool. The protocol takes ``0.3%`` liquidity provider fee on the token amount.
+Here the price in the lending pool relies on the state of the Uniswap pool, that can be manipulated. Uniswap V1 pools uses the Constant Product Market Maker ``E*T=K``, ``E`` is the ``ETH`` balance of the pool and ``T`` is the ERC20 token (``DVT``) balance in the pool. The protocol takes ``0.3%`` liquidity provider fee on the token amount.
 
 From there, the formula to exchange ``y`` tokens for ``ETH`` is:
 ```
