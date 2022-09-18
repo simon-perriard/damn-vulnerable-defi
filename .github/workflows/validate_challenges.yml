@@ -29,4 +29,4 @@ jobs:
         yarn run the-rewarder
         yarn run selfie
         yarn run compromised
-        yarb run puppet
+        yarn run puppet
