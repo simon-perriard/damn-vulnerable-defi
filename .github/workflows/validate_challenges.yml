@@ -13,9 +13,6 @@ jobs:
     steps:
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.4.1
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
     - name: Install yarn
       run: npm install --global yarn
     - name: Install dependencies
