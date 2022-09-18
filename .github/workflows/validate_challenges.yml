@@ -28,6 +28,4 @@ jobs:
         yarn run side-entrance
         yarn run the-rewarder
         yarn run selfie
-        yarn run compromised
-        yarn run puppet
-    
+        yarn run compromised    
