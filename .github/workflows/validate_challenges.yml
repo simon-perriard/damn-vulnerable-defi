@@ -30,3 +30,4 @@ jobs:
         yarn run selfie
         yarn run compromised
         yarn run puppet
+        yarn run puppet-v2
